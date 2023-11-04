@@ -38,7 +38,15 @@ console.log(updateKeyName(fruits, "nutritions", "nutrition"));
 */
 
 function updateKeyName(array, oldKey, newKey) {
-    // Your code here
+    //delete obj.name
+    for(let i = 0; i < array.length; i++) {
+        if (array[i][oldKey]) {
+            array[i][newKey] = array[i][oldKey]
+            delete array[i][oldKey]
+
+        }
+    }
+    return array
 }
 
 /* 10. `updateIdValues()` - Change all of the "id" values to six-character
@@ -55,7 +63,22 @@ console.log(updateIdValues(fruits));
 */
 
 function updateIdValues(array) {
-    // Your code here
+    // Your code here'
+    let res = []
+
+    for(let i = 0; i < array.length; i++){
+
+        let arrVal = array[i]["id"].toString().split('')
+        for(let j = 0; j < arrVal.length; j++){
+            if(arrVal.length < 6) {
+                arrVal.unshift(0)
+            }
+        }
+
+        array[i]["id"] = arrVal.join('')
+        res.push(array[i]["id"])
+    }
+    return res
 }
 
 /* 11. `deleteKeysandValues()` - Delete the keyToDelete from the nutritions
@@ -67,6 +90,10 @@ console.log(deleteKeysAndValues(fruits, "sugar"));
 
 function deleteKeysAndValues(array, keyToDelete) {
     // Your code here
+    for(let i = 0; i < array.length; i++) {
+        delete array[i].nutritions[keyToDelete]
+    }
+    return array
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
