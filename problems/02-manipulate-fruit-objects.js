@@ -9,7 +9,12 @@ console.log(addKeyAndValueToAll(fruits, "inStock", true));
 */
 
 function addKeyAndValueToAll(array, key, value) {
-    // Your code here 
+   for(let i = 0; i < array.length; i++){
+    // if(typeof array[i][key]===undefined){
+        array[i][key] = value// this code assigns keys and values into an object inside of an array
+    //   }
+}
+    return array
 }
 
 /* 08. `addKeyAndValueToOne()` - Return object at the given index array, adding the given key and
@@ -20,7 +25,8 @@ console.log(addKeyAndValueToOne(fruits, "color", "red", 1));
 */
 
 function addKeyAndValueToOne(array, key, value, index) {
-    // Your code here 
+    array[index][key] = value// array[] will break into an array at anypoint. and the [key] can break into the object
+    return array[index]
 }
 
 /* 09. `updateKeyName()` - Change the old key name to the new key name in all
@@ -32,7 +38,7 @@ console.log(updateKeyName(fruits, "nutritions", "nutrition"));
 */
 
 function updateKeyName(array, oldKey, newKey) {
-    // Your code here 
+    // Your code here
 }
 
 /* 10. `updateIdValues()` - Change all of the "id" values to six-character
@@ -49,7 +55,7 @@ console.log(updateIdValues(fruits));
 */
 
 function updateIdValues(array) {
-    // Your code here 
+    // Your code here
 }
 
 /* 11. `deleteKeysandValues()` - Delete the keyToDelete from the nutritions
@@ -60,7 +66,7 @@ console.log(deleteKeysAndValues(fruits, "sugar"));
 */
 
 function deleteKeysAndValues(array, keyToDelete) {
-    // Your code here 
+    // Your code here
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
