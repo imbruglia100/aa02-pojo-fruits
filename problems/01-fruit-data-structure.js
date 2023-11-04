@@ -62,7 +62,12 @@ console.log(fruitNames(fruits));
 */
 
 function fruitNames(fruits) {
-    // Your code here
+    let arr = []
+   for(let i = 0; i< fruits.length; i++){
+     arr.push(fruits[i].name)
+
+   }
+   return arr
 }
 
 /* 05. `getFruitKeys()` - Return a list of all of the keys for each fruit record.
@@ -73,7 +78,7 @@ NOTE: Call a function you previously wrote as a helper function.
 */
 
 function getFruitKeys(fruits) {
-    // Your code here
+   return (Object.keys(fruits[0], 1))
 }
 
 
@@ -87,7 +92,8 @@ console.log(getNutritionsKeys(fruits));
 */
 
 function getNutritionsKeys(fruits) {
-    // Your code here
+    return (Object.keys(fruits[0]["nutritions"], 1))
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
